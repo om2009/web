@@ -1,25 +1,43 @@
 canvas = new fabric.Canvas("myCanvas");
+
 // Create canvas variable
- block_y=1;
- block_x=1;
 
-block_image_width = 350;
-block_image_height = 430;
+//Set initial positions for ball and hole images.
+ball_x = 0;
+ball_y = 0;
+hole_x = 800;
+hole_y = 400;
 
-var block_image_object= "";
+block_image_width = 5;
+block_image_height = 5;
 
-function new_image(get_image)
-{
-	// to upload images
-	fabric.Image.fromURL(get_image, function(Img){
-		block_image_object = Img;
-		block_image_object.scaleToWidth(block_image_width);
-		block_image_object.scaleToHeight(block_image_height);
-		block_image_object.set({
-			top:block_y,
-			left:block_x
+function load_img(){
+	// write code to Upload golf image on the canvas
+	fabric.Image.fromURL("golf-h.png", function(Img){
+		hole_obj = Img;
+		hole_obj.scaleToWidth(50);
+		hole_obj.scaleToHeight(50);
+		hole_obj.set({
+			top:hole_y,
+			left:hole_x
 		});
-		canvas.add(block_image_object);
+		canvas.add(hole_obj);
+	});
+	new_image();
+}
+
+function new_image()
+{
+	// write code to Upload ball image on canvas
+	fabric.Image.fromURL("ball.png", function(Img){
+		ball_obj = Img;
+		ball_obj.scaleToWidth(50);
+		ball_obj.scaleToHeight(50);
+		ball_obj.set({
+			top:ball_y,
+			left:ball_x
+		});
+		canvas.add(ball_obj);
 	});
 }
 
@@ -27,44 +45,84 @@ window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e)
 {
-keyPressed = e.keyCode;
-console.log(keyPressed);
-
-	if(keyPressed == '82') // add appropriate keycode
+	keyPressed = e.keyCode;
+	console.log(keyPressed);
+	/* Check the coordinates of the ball and hole images to finish the game. 
+	And id coordinates matches them remove ball image, 
+	display "GAME OVER!!!" 
+	and make canvas border 'red'. */
+	if((ball_x==hole_x)&&(ball_y==hole_y))
 	{
-		block_x = 0;
-		// upload red ranger
-		new_image('rr1.png');
-		console.log("r");
-	}
-	if(keyPressed == '71')
-	{
-		block_x = 250;
-		// upload green ranger
-		new_image('gr.png');
-		console.log("g");
+		canvas.remove(ball_obj);
+		document.getElementById("hd3").innerHTML ="you won";
+		document.getElementById("myCanvas").style.borderColor ="red";
 	}
 	
-	if(keyPressed == '89')
-	{
-		block_x =429;
-		// upload yellow ranger
-		new_image('yr.png');
-		console.log("y");
+	else{
+		if(keyPressed == '38')
+		{
+			up();
+			console.log("up");
+		}
+		if(keyPressed == '40')
+		{
+			down();
+			console.log("down");
+		}
+		if(keyPressed == '37')
+		{
+			left();
+			console.log("left");
+		}
+		if(keyPressed == '39')
+		{
+			right();
+			console.log("right");
+		}
 	}
-	if(keyPressed == '80')
+	
+	function up()
 	{
-		block_x = 700;
-		// upload pink ranger
-		new_image('pr.png');
-		console.log("p");
+		// Write a code to move ball upward.
+		if(ball_y>=5)
+		{
+			ball_y = ball_y-block_image_height;
+			canvas.remove(ball_obj);
+			new_image();
+		}
 	}
-	if(keyPressed == '66')
+
+	function down()
 	{
-		block_x = 800;
-	// upload blue ranger
-	new_image('br.png');
-		console.log("b");
+		 // Write a code to move ball downward.
+		 if(ball_y<=450)
+		{
+			ball_y = ball_y+block_image_height;
+			canvas.remove(ball_obj);
+			new_image();
+		}
+	}
+
+	function left()
+	{
+		if(ball_x >5)
+		{
+			// Write a code to move ball left side.
+			ball_x = ball_x-block_image_width;
+			canvas.remove(ball_obj);
+			new_image();
+		}
+	}
+
+	function right()
+	{
+		if(ball_x <=1050)
+		{
+			// Write a code to move ball right side.
+			ball_x = ball_x+block_image_width;
+			canvas.remove(ball_obj);
+			new_image();
+		}
 	}
 	
 }
