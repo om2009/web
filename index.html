@@ -1,33 +1,44 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hit the Goal</title>
-<link rel="stylesheet" href="style.css">
-<script src="fabric.js"></script>
+	<title>log in</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-</head>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<body class="body_background" onload="load_img()">
+<script src="main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <br>
+        <br>
+		<h1 class="color">Math Quiz</h1>
+        <h4 class="color">Log in</h4>
+    </header>
 	<center>
-		<h3 id="hd3">Hit the Goal</h3>
-		<!--- Create canvas--->
-		<canvas height="500" width="1100" id="myCanvas"></canvas>
+		<div class="col-lg-4 col-sm-8 col-xs-11 login_div1">
+			<h3>Player 1 Login for the game</h3>
+			<label>User Name : </label>
+			<input type="text" id="player1_name_input" class="form-control" placeholder="Player 1 Name">
+			<br>
+		</div>
+	<br>
+	<div class="col-lg-4 col-sm-8 col-xs-11 login_div2">
+		<h3>Player 2 Login for the game</h3>
+		<label>User Name : </label>
+		<input type="text" id="player2_name_input" class="form-control" placeholder="Player 2 Name">
+		<br>
+	</div>
+	<br>
+
+	<button  class="button" onclick="addUser()">Log in</button> 
+
+	
 	</center>
-	<style>
-		#myCanvas
-{
-    margin-top: 30px;
-	border-width:10px;
-	background-color: white; 
-	border-style:ridge;
-}
-	</style>
-	<script src="main.js"></script>
 </body>
 </html>
