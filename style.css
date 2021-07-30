@@ -4,7 +4,7 @@ body
     text-align: center;
 }
 .color{
-    color:lightblue;
+    color:white;
 }
 
 	.login_div1 , .login_div2
@@ -15,10 +15,10 @@ body
 		border-radius: 15px;
 	}
     h3{
-        color: lightblue;
+        color: white;
     }
     label{
-        color: lightblue;
+        color: white;
     }
 
 
