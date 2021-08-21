@@ -23,8 +23,8 @@ function sent()
     check_button = "<br><br> <button class='btn btn-info' onclick='check()'>Check</button>";
     row = question_number + input_box + check_button;
     document.getElementById("output").innerHTML = row;
-    document.getElementById("number1").value = "  ";
-    document.getElementById("number2").value = " ";
+    document.getElementById("number_1").value = " ";
+    document.getElementById("number_2").value = " ";
 }
 function check()
 {
