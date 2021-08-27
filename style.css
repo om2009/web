@@ -15,21 +15,30 @@ html, body
 
 .head_div
 {
-background-image: linear-gradient(to right top, #33a0f1, #2591d9, #1882c1, #0a73aa, #006494);
+    background: #F1F2B5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
+    
 height: 100%;
 width: 30%;
 text-align: center;
 }
 .logo
 {
-	width: 100px;margin-top: 30px;border-radius: 50px;
+	width: 100px; margin-top: 30px;border-radius: 50px;
 }
 h3, h4{
     font-family: monospace;
 }
 .main{
     text-align: center;
-    background-color: lightblue; 
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 width: 70%;
 height: 100%;
 }
