@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="room.css">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
-</body>
+    <button id="logout" class="glyphicon glyphicon-log-out btn btn-link" onclick="logout();">Logout</button>
+    <h1 class="header">	
+        Let' s chat	
+        <sup>
+            <img class="logo" src="https://icon2.cleanpng.com/20180319/dhw/kisspng-telegram-logo-scalable-vector-graphics-computer-so-icon-download-telegram-5ab08453a5b128.4688857815215176516787.jpg">
+        </sup>
+    </h1>
+    <br>
+    <br>
+    <h5 id="user_name" class="color_white" ></h5>
+    <br>
+    <br>
+    <div class="form-group input_div_room_page">
+        <h4>Add room</h4>
+        <br>
+        <input type="text" id="room_name" class="in" placeholder="Room Name">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <button class="btn btn-info" onclick="addRoom();">Add Room</button>
+    </div>
+    </body>
 </html>
