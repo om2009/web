@@ -1,0 +1,33 @@
+.logo
+{
+	width: 80px;margin-top: 30px;border-radius: 40px;
+    letter-spacing: 1px;
+}
+.header{
+    float: left;
+    margin-top: -20px;
+}
+#logout{
+    float: right;
+}
+body{
+    text-align: center;
+    color: white;
+    font-family:monospace;
+    letter-spacing: 10px;
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+}
+.in{
+    width: 1290px;
+    height: 40px;
+    margin-top: 400px;
+    border: 0px;
+    border-radius: 70px;
+    background-color: white;
+    color: black ;
+}
+#output
+{
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;
+    margin-top: 270px;
+}
