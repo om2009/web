@@ -1,53 +1,37 @@
-.header
-{
-	color: white;font-family: 'Yeon Sung';font-size: 45px;letter-spacing: 10px;margin-top: 80px;
-}
-.header img
-{
-	width: 80px;margin-left: -15px;
-}
-html, body
-{
-  height: 100%;
-  margin: 0;
-  color: white;
-}
-
-.head_div
-{
-    background: #F1F2B5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
-
-    
-height: 100%;
-width: 30%;
-text-align: center;
-}
 .logo
 {
-	width: 100px; margin-top: 30px;border-radius: 50px;
+	width: 100px; border-radius: 50px; 
 }
-h3, h4{
-    font-family: monospace;
+.header
+{
+	color: orange;font-family: 'Yeon Sung';font-size: 30px;
+    float: left;
+    margin-top: -5px;
 }
-.main{
+body{
     text-align: center;
-    background: #83a4d4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-width: 70%;
-height: 100%;
+    background-color: yellow;
+    color: orange;
+    letter-spacing: 20px;
 }
-.main_div{
-    position: absolute;
-    top: 20%;
-    right: 20%;
+#main{
+    margin-top: 100px;
+}
+#sign_in{
+    margin-top: 70px;
+    color: yellow;
+    background-color: orange;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+}
+#sign_in:hover{
+   color: orange;
+   background-color: yellow; 
 }
 .in{
+    margin-top: 70px;
     border: 0;
     border-radius: 25px;
     width: 500px;

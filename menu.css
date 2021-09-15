@@ -1,0 +1,35 @@
+.logo
+{
+	width: 100px; border-radius: 50px; 
+}
+.header
+{
+	color: orange;font-family: 'Yeon Sung';font-size: 30px;
+    float: left;
+    margin-top: -5px;
+}
+
+body{
+    text-align: center;
+    background-color: yellow;
+    color: orange;
+}
+#logout{
+    float: right;
+}
+
+#img{
+    width: 150px;
+    height: 150px;
+}
+#menu
+{
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;
+}
+#main{
+    margin-top: 150px;
+}
+#user_name{
+    margin-right: 150px;
+
+}

@@ -4,42 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="col-sm-3 sidenav head_div">
-        <h1 class="header ">	
-            let's chat<sup>
-        <img src="m2.png">
-        </sup>
-    </h1>
-    <br>
-    <br>
-    <img src="https://icon2.cleanpng.com/20180319/dhw/kisspng-telegram-logo-scalable-vector-graphics-computer-so-icon-download-telegram-5ab08453a5b128.4688857815215176516787.jpg" class="logo">
-		<h3 >See what is happening in the world right now</h3>
-        <br>
-		<h4 >Join Let' s chat today</h4>
-    </div>
-    <div class="col-sm-7 main">
-        <div class="form-group main_div">
-            <h1>Sign In</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <label >User Name:</label>
-            <input type="text" id="user_name" class="in" placeholder="User Name">
-            <br>
-            <br>
-            <button id="login_button" class="btn btn-info" onclick="addUser();">Log in</button>
-          </div>
-      </div>
-      <script src="main.js"></script>
+    <h1 class="header ">	
+        Pizza<sup>
+    <img class="logo" src="pizza.webp">
+    </sup>
+</h1>
+<br>
+<br>
+<br>
+<div id="main">
+<h1 style="font-size: 50px;">Sign in </h1>
+<h4>User Name</h4>
+<input class="in" id="user_name" placeholder="User name">
+<h4>User address</h4>
+<input class="in" id="user_ad" placeholder="User address">
+<br>
+<button id="sign_in" onclick="add_user();">Sign in</button>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
