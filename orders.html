@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header">	
+        Pizza<sup>
+    <img class="logo" src="pizza.webp">
+    </sup>
+</h1>
+<br>
+<div class="main">
+    <center>
+    <h1 style="margin-right: 170px;">My orders</h1>
+    <div id="output"></div>
+    </center>
+</div>
+    <style>
+        .logo
+{
+	width: 100px; border-radius: 50px; 
+}
+.header
+{
+	color: orange;font-family: 'Yeon Sung';font-size: 30px;
+    float: left;
+    margin-top: -5px;
+}
+
+body{
+    text-align: center;
+    background-color: yellow;
+    color: orange;
+}
+#output
+{
+	padding: 10px; width:80%;background: rgba(255,255,255,0.8);border-radius: 15px;margin-top: 200px;
+}
+    </style>
+    <script>
+        var firebaseConfig = {
+  apiKey: "AIzaSyCys5K_BxIn0Mhk6yKH7rGrDPrwI6OVizw",
+  authDomain: "project-4447c.firebaseapp.com",
+  databaseURL: "https://project-4447c-default-rtdb.firebaseio.com",
+  projectId: "project-4447c",
+  storageBucket: "project-4447c.appspot.com",
+  messagingSenderId: "188654649048",
+  appId: "1:188654649048:web:79c0a726044093393aa1ad"
+};
+  firebase.initializeApp(firebaseConfig);  
+        user_name = localStorage.getItem("user_name");
+        user_ad = localStorage.getItem("user_ad");
+        function getData() { firebase.database().ref(user_name+user_ad).on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey  = childSnapshot.key; childData = childSnapshot.val(); 
+            message_data = childData;
+            console.log(message_data);
+            pizza = message_data['pizza']
+            document.getElementById("output").innerHTML =+  pizza;
+        });  }); }
+getData();
+    </script>
+</body>
+</html>
