@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyCys5K_BxIn0Mhk6yKH7rGrDPrwI6OVizw",
-    authDomain: "project-4447c.firebaseapp.com",
-    databaseURL: "https://project-4447c-default-rtdb.firebaseio.com",
-    projectId: "project-4447c",
-    storageBucket: "project-4447c.appspot.com",
-    messagingSenderId: "188654649048",
-    appId: "1:188654649048:web:79c0a726044093393aa1ad"
-  }
+    apiKey: "AIzaSyCMlobINT-E-0wkjTRVNrbykPKn_cZU4Yo",
+    authDomain: "chat-e51d8.firebaseapp.com",
+    databaseURL: "https://chat-e51d8-default-rtdb.firebaseio.com",
+    projectId: "chat-e51d8",
+    storageBucket: "chat-e51d8.appspot.com",
+    messagingSenderId: "356932066739",
+    appId: "1:356932066739:web:e7e27fe3a4670008af3fc6"
+  };
   firebase.initializeApp(firebaseConfig);  
 
 user_name = localStorage.getItem("user_name");
