@@ -1,7 +1,7 @@
-body{
-    font-family: cursive;
+body{ 
     background: lightblue;
     color: rgb(62, 167, 202);
+    font-family: 'Roboto Slab', serif, cursive;
 }
 
 .header_div{

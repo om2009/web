@@ -1,8 +1,15 @@
-function add_user()
+function startClassification()
 {
-    user_name = document.getElementById("user_name").value;
-    localStorage.setItem("user_name", user_name)
-    user_ad = document.getElementById("user_ad").value;
-    localStorage.setItem("user_ad", user_ad)
-    window.location = "menu.html";
+    navigator.mediaDevices.getUserMedia({audio: true});
+    classifier = ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/aV13GYJB8/model.json', modelReady);
+
+}
+ function modelReady()
+ {
+    classifier.classify(gotResults);
+ }
+
+ function gotResults(error, results){
+
+    console.log(results);
 }
