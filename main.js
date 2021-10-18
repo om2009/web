@@ -36,7 +36,31 @@ function modelLoaded()
 function speak()
 {
     var synth = window.speechSynthesis;
-    speak_data_1 = "The first prediction is " + prediction;
+    speak_data_1 = "The prediction is " + prediction;
     var utterThis = new SpeechSynthesisUtterance(speak_data_1);
     synth.speak(utterThis);
+}
+
+
+function check()
+{
+    img = document.getElementById("capture_image");
+
+    classifier.classify(img, gotResult);
+
+}
+
+
+
+function gotResult(error, results)
+{
+    if(error)
+    {
+        console.error(error);
+    }else{
+        console.log(results);
+        document.getElementById("result_emotion_name").innerHTML = results[0].label;
+        prediction = results[0].label;
+        speak();
+    }
 }
