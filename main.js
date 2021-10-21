@@ -1,66 +1,50 @@
-prediction = "";
+function preload()
+{
+}
+
+function setup()
+{
+    canvas = createCanvas(500,400);
+    canvas.position(110,250);
+    video = createCapture(VIDEO);
+    video.hide();
+
+    frame_color = "gray"
+}
 
 
 
-Webcam.set({
-    width : 350,
-    height : 300,
-    image_format : 'png',
-    png_qulity : 90
-});
+function draw()
+{
+    image(video, 70, 50, 350, 300);
 
-camera = document.getElementById("camera");
+    let c;
+    noStroke();
+    c = color(frame_color);
+    fill(c);
+    rect(30, 10, 435, 35); 
 
+    c = color(frame_color);
+    fill(c);
+    rect(30, 40, 35, 350); 
 
-Webcam.attach('#camera');
+    c = color(frame_color);
+    fill(c);
+    rect(430, 40, 35, 350);
+
+    c = color(frame_color);
+    fill(c);
+    rect(30, 355, 435, 35);
+}
 
 
 function take_snapshot()
 {
-    Webcam.snap(function(data_uri)
-    {
-        document.getElementById("result").innerHTML = '<img id ="capture_image" src ="'+data_uri+'"/>';
-    });
-}
-
-console.log('ml5 version : ', ml5.version);
-
-
-classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/uOQ3gbWX8/model.json", modelLoaded); 
-
-function modelLoaded()
-{
-    console.log('Model ready');
-}
-
-function speak()
-{
-    var synth = window.speechSynthesis;
-    speak_data_1 = "The prediction is " + prediction;
-    var utterThis = new SpeechSynthesisUtterance(speak_data_1);
-    synth.speak(utterThis);
+    save('filter image.png');
 }
 
 
-function check()
+function framecolor()
 {
-    img = document.getElementById("capture_image");
-
-    classifier.classify(img, gotResult);
-
-}
-
-
-
-function gotResult(error, results)
-{
-    if(error)
-    {
-        console.error(error);
-    }else{
-        console.log(results);
-        document.getElementById("result_emotion_name").innerHTML = results[0].label;
-        prediction = results[0].label;
-        speak();
-    }
+    frame_color = document.getElementById("color_name").value;
 }
