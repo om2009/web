@@ -113,9 +113,13 @@ function gotResult(error, result)
         {
             score = "Score : you won 🥳";
             document.getElementById("score").innerHTML = score;
+            utterthis = new SpeechSynthesisUtterance('you won');
+            synth.speak(utterthis);
         }else{
             score = "Score : you lose 😞";
             document.getElementById("score").innerHTML = score;
+            utterthis = new SpeechSynthesisUtterance('you lose');
+            synth.speak(utterthis);
         }
     }
 
