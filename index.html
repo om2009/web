@@ -1,92 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Realtime Drawing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google lens VS MobileNet</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <h1 class="heading">Case Study Between Google Lens And MobileNet</h1>
-    <span class="google_lens">
-        <h1>Google Lens</h1>
-        <img width="100px" height="100px" src="Google_Lens.png">
-    </span>
+
+<body background="https://media.istockphoto.com/vectors/english-language-seamless-pattern-vector-id1294801881?k=20&m=1294801881&s=612x612&w=0&h=aWphHrEoAbBMWQo4S78Fuu_PJdGXO8va9QyInWzk4hw=">
+<center>
+  <h3 class="btn btn-info heading">FONT MANIPULATOR
     <br>
-    <h1 class="heading">VS</h1>
+    <span class="note"><b>NOTE - </b>Get your left and right wrist closer 
+      to reduce the size of the font size and to increase the font size keep your both wrist far from each other</span>
     <br>
-    <span class="mobilenet">
-        <h1>MobileNet</h1>
-        <img width="150px" height="80px" src="mobilenet.png">
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
-            <ol style="
-                font-size: 18px;
-                font-family: monospace;
-                letter-spacing: 2px;
-                color: gray; 
-            ">
-                <div class="test_image_and_result col-xs-12">
-                    <li class="col-sm-4 col-xs-12">
-                        <b style="
-                            font-size: 18px;
-                            font-family: monospace;
-                            letter-spacing: 2px;
-                            color: gray; ">Test Image - </b>
-                        <img height="500px" width="400px" src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXIlMjBib3R0bGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80">
 
-                    </li>
-                    <h5 class="col-sm-4 col-xs-12">
-                        Output on <b>Google Lens</b> - 
-                        <span>A water bottle</span>
-                    </h5>
-                    <h5 class="col-sm-4 col-xs-12">
-                        Output on <b>MobileNet</b> - 
-                        <span>soda bottle</span>
-                    </h5>
+  </h3>
+</center>
+<br>
+<div class="footer">
+  Developed by : Om Kiran Kakade
+</div>
 
-                    <div class="mini_result col-xs-12">
-                        <h4>Result - Google Lens is more accurate</h4>
-                        <hr>
-                        <h4> </h4>
-                    </div> 
-                    
-                </div>
-                <div class="test_image_and_result col-xs-12">
-                    <li class="col-sm-4 col-xs-12">
-                        <b style="
-                            font-size: 18px;
-                            font-family: monospace;
-                            letter-spacing: 2px;
-                            color: gray; ">Test Image - </b>
-                        <img height="500px" width="250px" src="https://m.media-amazon.com/images/I/710Z2j5FMtL._SY606_.jpg">
-
-                    </li>
-                    <h5 class="col-sm-4 col-xs-12">
-                        Output on <b>Google Lens</b> - 
-                        <span>samsung galaxy A50</span>
-                    </h5>
-                    <h5 class="col-sm-4 col-xs-12">
-                        Output on <b>MobileNet</b> - 
-                        <span>ipad</span>
-                    </h5>
-
-                    <div class="mini_result col-xs-12">
-                        <h4>Result - Google Lens is more accurate</h4>
-                        <hr>
-                        <h4> </h4>
-                    </div> 
-                    
-                </div>
-            </ol>
-             
-    </span>
+<script src="main.js"></script>
 </body>
 </html>

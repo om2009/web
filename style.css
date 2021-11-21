@@ -3,47 +3,30 @@ body{
 
 }
 .heading{
-    font-size: 18px;
+    font-size: 25px;
+    color: white;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgb(95, 205, 241);
+}
+.note{
+    font-size: 15px;
+    color: rgb(214, 214, 214);
+    white-space:normal;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    line-height: 4;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    width: 100%;
     font-family: monospace;
-    letter-spacing: 2px;
-    color: gray;
-    margin-top: 10px;
 }
-.google_lens h1{
-    font-size: 27px;
-    font-family: monospace;
-    letter-spacing: 2px;
-    color: gray;
-}
-.mobilenet h1{
-    font-size: 27px;
-    font-family: monospace;
-    letter-spacing: 2px;
-    color: gray;
-}
-
-hr{
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-.test_image_and_result{
-    background-color: gainsboro;
-    border-radius: 10px;
-    width: 97%;
-}
-.mini_result
-{
-    font-size: 18px;
-    font-family: monospace;
-    letter-spacing: 2px;
-    color: gray; 
-}
-h5
-{
-    font-size: 18px;
-    font-family: monospace;
-    letter-spacing: 2px;
-    color: gray; 
+canvas{
+    border: 5px white;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: 20px 55px 55px black;
 }

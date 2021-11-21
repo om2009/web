@@ -1,18 +1,4 @@
-function preload(){
-
-}
-
-
 function setup(){
-    canvas = createCanvas(400, 350);
-    canvas.center();
-}
-
-function draw()
-{
-
-}
-
-function take_snapshot(){
-    save('myFilterImage.png');
+    canvas = createCanvas(500, 500)
+    canvas.position(550,150);
 }
