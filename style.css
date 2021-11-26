@@ -8,6 +8,9 @@ body{
     width: 100%;
     box-shadow: 5px 5px 5px rgb(95, 205, 241);
 }
+#user_name{
+    color: black;
+}
 .note{
     font-size: 15px;
     color: rgb(214, 214, 214);
