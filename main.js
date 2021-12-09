@@ -3,6 +3,8 @@ song_2 = "";
 
 score_left_wrist = 0;
 
+score_right_wrist = 0;
+
 left_wrist_x = 0;
 
 left_wrist_y = 0;
@@ -40,6 +42,7 @@ function gotPoses(result)
     {
     console.log(result);
     score_left_wrist = result[0].pose.keypoints[9].score;
+    score_right_wrist = result[0].pose.keypoints[10].score;
     left_wrist_x = result[0].pose.leftWrist.x;
     left_wrist_y = result[0].pose.leftWrist.y;
     right_wrist_x = result[0].pose.rightWrist.x;
@@ -62,6 +65,16 @@ function draw()
         {
             song_1.play();
             document.getElementById("song_name").innerHTML = "harry potter";
+        }
+    }
+    if(score_right_wrist >0.2)
+    {
+        circle(right_wrist_x, right_wrist_y, 20);
+        song_1.stop();
+        if(song_2.isPlaying()== false)
+        {
+            song_2.play();
+            document.getElementById("song_name").innerHTML = "peater pan";
         }
     }
 }
