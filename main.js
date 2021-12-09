@@ -64,7 +64,7 @@ function draw()
         if(song_1.isPlaying()== false)
         {
             song_1.play();
-            document.getElementById("song_name").innerHTML = "harry potter";
+            document.getElementById("song_name").innerHTML = "Song : harry potter";
         }
     }
     if(score_right_wrist >0.2)
@@ -74,7 +74,7 @@ function draw()
         if(song_2.isPlaying()== false)
         {
             song_2.play();
-            document.getElementById("song_name").innerHTML = "peater pan";
+            document.getElementById("song_name").innerHTML = "Song : peater pan";
         }
     }
 }
