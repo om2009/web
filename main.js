@@ -1,16 +1,34 @@
-function laptop()
+video = "";
+status_label = "";
+function preload()
 {
-    window.open("laptop.html")
+    
 }
-function ac()
+
+
+function setup()
 {
-    window.open("ac.html")
+    canvas = createCanvas(480, 400);
+    canvas.center();
+    video = createCapture(VIDEO);
+    video.hide();
 }
-function bottel()
+
+function draw()
 {
-    window.open("bottel.html");
+    image(video, 0, 0, 480, 400);
 }
-function mobile()
+
+function start()
 {
-    window.open("mobile.html")
+    objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+    document.getElementById("status").innerHTML = " status : detecting object";
+    
 }
+
+function modelLoaded()
+{
+    console.log("model is ready");
+    status_label = true;
+}
+
