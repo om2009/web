@@ -1,32 +1,25 @@
-body{
-    
-    text-align:  center;
-    background: #CC95C0;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+body
+{
+    text-align: center;
+    font-family: monospace;
 }
 .heading{
     width: 100%;
-    font-size: 25px;
-    margin: 0px;
+    text-align: left;
 }
-#number_of_object, #status{
-    font-size: 15px;
+.heading button{
+    float: right;
     
 }
-
-
-canvas{
-    border-radius: 20px;
-    background-color: whitesmoke;
-    box-shadow: 5px 5px 20px 15px  lightblue;
-    margin-top: 120px;
-    border: 2px solid whitesmoke;
-}
-
-.in{
-    width: 400px;
-    height: 40px;
+.heading h3{
     
+    display: inline;
+}
+.item{
+    font-size: 20px;
+    font-family: monospace;
+    
+}
+.modal-dialog{
+    width: 90%;
 }
